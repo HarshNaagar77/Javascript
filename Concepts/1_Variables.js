@@ -10,6 +10,10 @@ console.log(number,name,surname)            // Displays multiple variables at a 
 
 
 // Const -> Can not be overwrite 
-// Var -> can be overwrite but if there are more than one varibale of same name it overwrites all
+
+// Var -> 1. Can be overwrite but if there are more than one varibale of same name it overwrites all
+//        2. Issue of block scope and functional scope occurs 
+
 // Let -> 1. Can be overwrite but do not overwrite all
 //        2. In modern js we use let to make code more efficient
+//        3. Has block scope i.e., It is only valid in the block where it is
