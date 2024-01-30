@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="languages">
+
+    </div>
+</body>
+<script>
+    document.querySelector(".languages").style.display = "flex"
+    document.querySelector(".languages").style.gap = "10px"
+    document.querySelector(".languages").style.flexWrap = "wrap"
+    document.querySelector(".languages").style.margin = "120px"
+    document.querySelector(".languages").style.justifyContent = "start"
+    
+    const languages = ["Python", "JavaScript", "Java", "C#", "C++", "PHP", "Ruby", "Swift", "C", "TypeScript", "Go", "Kotlin", "Rust", "Dart", "Scala", "R", "MATLAB", "Bash", "PowerShell", "HTML", "CSS", "SQL", "Assembly", "Haskell", "Perl", "Lua", "Groovy", "Visual", "Fortran", "COBOL", "Ada", "Lisp", "Prolog", "Scheme", "Erlang", "Tcl", "Julia", "Apex", "ABAP", "ActionScript", "Elixir"];
+    function addLang(language){
+        const add = document.createElement('h2')
+        add.textContent = language;
+        document.querySelector(".languages").appendChild(add)
+        document.querySelector('body').style.backgroundColor = "#212121"
+        document.querySelector('body').style.color = "white"
+        document.querySelector("body").style.textTransform = "uppercase"
+        document.querySelector("body").style.fontFamily = "sans-serif"
+        add.className = "head"
+    }
+    const map = languages.map( (e) =>{
+        return addLang(e)
+    })
+    const mapping = document.querySelectorAll(".head")
+    mapping.forEach( (e) => {
+        e.style.padding = "10px"
+        e.style.border = "1px solid black"
+        e.style.backgroundColor = "White"
+        e.style.color = "black"
+        e.style.borderRadius = "10px"
+        e.style.fontSize = "20px"
+    })
+    
+</script>
+</html>

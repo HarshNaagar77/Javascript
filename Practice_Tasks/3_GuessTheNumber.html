@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #game {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        form{
+            display: none;
+        }
+        #restart{
+            display: none;
+        }
+        .main{
+            margin-top: 25vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <h1>Guess the Number Game</h1>
+        <h3>Guess any number between 1 to 50</h2>
+            <div id="game">
+                <button id="start">Start</button>
+                <form id="guessform">
+                    <label for="guess">Enter your guess:</label>
+                    
+                    <input type="number" id="guess" name="guess" required>
+                    
+                    <button id="btn" >Submit Guess</button>
+                </form>
+                <div id="res">
+                    <p id="hint"></p>
+                    <p id="result">Result</p>
+                </div>
+                <button id="restart">Restart Game</button>
+            </div>
+        </div>
+            
+</body>
+<script>
+
+    let start = document.querySelector("#start")
+    start.addEventListener('click', function(e){
+        document.querySelector("form").style.display = "block"
+        document.querySelector("#start").style.display = "none"
+        document.querySelector("#restart").style.display = "block"
+    })
+
+    let num = Math.random()
+    num = Math.ceil(((num * 100)/2))
+    console.log(num)
+    
+    const formVal = document.querySelector("form")
+    formVal.addEventListener('submit', function(e){
+        e.preventDefault()
+        let val = document.querySelector("#guess").value
+        // console.log(val)
+        for (let turn = 0 ; turn < 10 ; turn++) {
+            if(parseInt(val) === num){
+                document.querySelector("#hint").innerHTML = ``
+                document.querySelector("#result").innerHTML = `You won! The number was ${num}`
+            }
+            else if(val != num){
+                if( val < num){
+                    document.querySelector("#hint").innerHTML = `Your number is too small! Try again`
+                }
+                if( val > num){
+                    document.querySelector("#hint").innerHTML = `Your number is greater! Try again`
+                }
+            }
+            // document.querySelector('#guess').disabled=true;
+            // document.querySelector("#hint").innerHTML = ``
+            // document.querySelector("#result").innerHTML = `You lose! Try again`
+        }
+        
+    })
+    
+    const add = document.createElement('p')
+    add.textContent = "";
+    document.querySelector("#res").appendChild(add)
+    
+let again = document.querySelector("#restart")
+again.addEventListener('click', function(e){
+    location.reload();
+})
+
+</script>
+</html>

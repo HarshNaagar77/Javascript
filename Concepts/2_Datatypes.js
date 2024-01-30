@@ -21,7 +21,7 @@ console.log(typeof value2)
 
 // String to Number
 let data1 = "33" // String
-let convert1 = Number(data1)
+let convert1 = Number(data1)    
 console.log(typeof convert1) // return number as datatype
 
 // Number to String
