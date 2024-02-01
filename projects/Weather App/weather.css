@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+}
+.flex1{
+    /* background-color: red; */
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.flex2{
+    background-color: #eeeef0;
+    width: 65%;
+    flex-wrap: wrap;
+}
+
+.search {
+    border-radius: 15px;
+    height: 25px;
+    width: 200px;
+    border: 0;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: #eeeef0;
+}
+.btn1{
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    background-color: #748cf1;
+    color: white;
+    border: 0;
+}
+
+.temphead{
+    font-size: 100px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: 0;
+    margin-top: 20px;
+    /* text-align: center; */
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 100;
+}
+.tempara{
+    font-size: 20px;
+    /* text-align: center; */
+    /* padding-top: -30px; */
+    margin-top: -10px;
+    border-bottom: 1px solid black;
+    margin-right: -30px;
+    padding-bottom: 20px;
+    margin-left: -30px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.temp{
+    text-align: center;
+}
+
+.date{
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    line-height: 25%;
+    font-weight: 100;
+    font-size: 20px;
+}
+.location{
+    font-family: 'PT Sans', sans-serif;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.image{
+    width: 200px;
+    margin-top: 50px;
+}
+
+.today{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    display: flex ;
+    gap: 10px;
+
+}
+.options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 30px;
+}
+.box{
+    width: 250px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: #748cf1;
+    /* margin: 1px; */
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    
+}
+.content{
+    padding: 35px;
+    padding-left: 80px;
+}
+
+.wind{
+    font-size: 40px;
+    margin-top: -10px;
+    /* padding-left: 10px; */
+}
+.windtext{
+    margin-top: 25px;
+}
+.winddirection{
+    margin-top: -35px;
+}
+
+.boxcontent{
+    margin-left: 20px;
+    
+}
+
+.sunrise{
+    font-size: 20px;
+    margin-top: 40px;
+}
+.sunset{
+    font-size: 20px;
+}
+.phase{
+    line-height: 90%;
+}
+
+
+
+
+@media screen and (max-width: 768px)  {
+    .main{
+        display: block;
+    }
+    .flex1{
+        width: 100%;
+    }
+    .flex2{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .options{
+        gap: 20px;
+    }
+    
+  }
+
