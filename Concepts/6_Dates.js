@@ -1,5 +1,6 @@
 let date = new Date
 console.log(date)
+console.log(date.getHours())
 
 console.log(date.toString())        // Returns date as string
 console.log(date.getDay())          // Returns day 
