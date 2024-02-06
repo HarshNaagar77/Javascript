@@ -3,12 +3,16 @@
 body{
     padding: 0;
     margin: 0;
+    cursor:default;
+    overflow-x: hidden;
 }
 .main{
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
     width: 100vw;
+    /* z-index: 100; */
+    z-index: 1;i
 }
 .flex1{
     /* background-color: red; */
@@ -33,6 +37,8 @@ body{
     padding: 5px;
     padding-left: 10px;
     background-color: #eeeef0;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    
 }
 .btn1{
     border-radius: 50%;
@@ -41,6 +47,8 @@ body{
     background-color: #748cf1;
     color: white;
     border: 0;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .temphead{
@@ -108,6 +116,7 @@ body{
     /* margin: 1px; */
     color: white;
     font-family: 'PT Sans', sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
     
 }
 .content{
@@ -163,3 +172,258 @@ body{
     
   }
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+/* .tomorrow{
+  opacity:0.7;
+  cursor: pointer;
+}
+.today2{
+  border-bottom: 1px solid black;
+  cursor: pointer;
+} */
+
+.today2{
+  font-size: 17px;
+  border: none;
+  padding: 0;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  cursor: pointer;
+}
+.tomorrow{
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.7;
+  background-color: transparent;
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background:  #ffd401;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  z-index: -1;
+}
+
+.toggle:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #183153 ;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.toggle:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.toggle span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 5px;
+  color: black;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle:hover span {
+  color: white;
+  animation: scaleUp 0.3s ease-in-out;
+
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  
+  50% {
+    transform: scale(0.95);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+body.dark-theme {
+
+  /* background-color: #1D1F2C; */
+  background-color: #40445e;
+  color: #ffffff;
+}
+.flex2.dark-theme{
+  background-color: #1D1F2C;
+}
+
+.box.dark-theme{
+  background-color:#596cb7;
+}
+
+.tomorrow.dark-theme{
+  color: white;
+  border-bottom-color: white;
+}
+.today2.dark-theme{
+  color: white;
+  border-bottom-color: white;
+}
+
+/* loader  */
+
+.load{
+  display: none;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  /* z-index: -1; */
+}
+
+.pl {
+  display: block;
+  width: 9.375em;
+  height: 9.375em;
+}
+
+.pl__arrows,
+.pl__ring-rotate,
+.pl__ring-stroke,
+.pl__tick {
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.pl__arrows {
+  animation-name: arrows42;
+  transform: rotate(45deg);
+  transform-origin: 16px 52px;
+}
+
+.pl__ring-rotate,
+.pl__ring-stroke {
+  transform-origin: 80px 80px;
+}
+
+.pl__ring-rotate {
+  animation-name: ringRotate42;
+}
+
+.pl__ring-stroke {
+  animation-name: ringStroke42;
+  transform: rotate(-45deg);
+}
+
+.pl__tick {
+  animation-name: tick42;
+}
+
+.pl__tick:nth-child(2) {
+  animation-delay: -1.75s;
+}
+
+.pl__tick:nth-child(3) {
+  animation-delay: -1.5s;
+}
+
+.pl__tick:nth-child(4) {
+  animation-delay: -1.25s;
+}
+
+.pl__tick:nth-child(5) {
+  animation-delay: -1s;
+}
+
+.pl__tick:nth-child(6) {
+  animation-delay: -0.75s;
+}
+
+.pl__tick:nth-child(7) {
+  animation-delay: -0.5s;
+}
+
+.pl__tick:nth-child(8) {
+  animation-delay: -0.25s;
+}
+
+/* Animations */
+@keyframes arrows42 {
+  from {
+    transform: rotate(45deg);
+  }
+
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes ringRotate42 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes ringStroke42 {
+  from,
+	to {
+    stroke-dashoffset: 452;
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    stroke-dashoffset: 169.5;
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes tick42 {
+  from,
+	3%,
+	47%,
+	to {
+    stroke-dashoffset: -12;
+  }
+
+  14%,
+	36% {
+    stroke-dashoffset: 0;
+  }
+}
+/* end of loader */
+
+
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
