@@ -10,18 +10,18 @@ form.addEventListener('submit' , function(e){
     const cityName = document.querySelector("#city").value
     const url = `https://weatherapi-com.p.rapidapi.com/forecast.json?q=${cityName}&days=3`;
     const options = {
-        method: 'GET',
+        method: 'GET', 
         headers: {
             'X-RapidAPI-Key': '25c27d3856mshb1d6ade997a13ebp1e8d2cjsnce8b2004be5d',
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
         }
-    };
+    };  
     fetch(url ,options)
     .then((response) => {
         return response.json()
     })
     .then( (data) => {
-    console.log(data)
+    // console.log(data)
     setTimeout(() => {
  
     document.querySelector("#temphead").innerHTML = `${data.current.temp_c}°C` 

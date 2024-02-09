@@ -18,7 +18,7 @@ Array.prototype.naagar = function(){
     let sum=0;
     for (let i in this)   // looping through each element of array and adding it to sum variable
         if(!isNaN(this[i]))     // checking whether current element is a number or not  
-        sum += this[i];      // if yes then add that number to sum
+        sum += this[i];      // if yes t  hen add that number to sum
     return sum;             // returning the final value of sum
 }
 console.log(arr.naagar())           //  calling the new method naagar() on an array

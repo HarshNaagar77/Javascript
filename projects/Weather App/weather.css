@@ -56,7 +56,7 @@ body{
     padding-bottom: 0;
     margin-bottom: 0;
     border: 0;
-    margin-top: 20px;
+    margin-top: -20px;
     /* text-align: center; */
     font-family: 'PT Sans', sans-serif;
     font-weight: 100;
@@ -177,6 +177,7 @@ body{
     .load{
       margin-top: -30px;
       height: 100%;
+      z-index: 5;
     }
     /* .header{
       display: flex;
@@ -445,4 +446,103 @@ body.dark-theme {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.container {
+  width: 250px;
+  height: 250px;
+  /* margin: 100px auto; */
+  /* padding: 15px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -5;
+}
+.cloud {
+  width: 250px;
+  z-index: 0;
+}
+.front {
+  padding-top: 45px;
+  margin-left: 25px;
+  display: inline;
+  position: absolute;
+  z-index: 1;
+  animation: clouds 8s infinite;
+  animation-timing-function: ease-in-out;
+}
+.back {
+  margin-top: -30px;
+  margin-left: 150px;
+  z-index: 0;
+  animation: clouds 12s infinite;
+  animation-timing-function: ease-in-out;
+}
+.right-front {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -25px;
+  z-index: 0;
+}
+.left-front {
+  width: 65px;
+  height: 65px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 0;
+}
+.right-back {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c9beb;
+  display: inline-block;
+  margin-left: -20px;
+  z-index: 0;
+}
+.left-back {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c9beb;
+  display: inline-block;
+  z-index: 0;
+}
+.sun {
+  width: 120px;
+  height: 120px;
+  background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+  background: linear-gradient(to right, #fcbb04, #fffc00);
+  border-radius: 60px;
+  display: inline;
+  position: absolute;
+}
+.sunshine {
+  animation: sunshines 2s infinite;
+}
+@keyframes sunshines {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+@keyframes clouds {
+  0% {
+    transform: translateX(15px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(15px);
+  }
 }
