@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: ninja;
+    src: url("./a-assassin-ninja-font/AssassinNinja-7BYyR.ttf");
+}
+body{
+    font-family: "Archivo", sans-serif;
+    background-color: black;
+    padding: 0;margin: 0;
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;
+    /* margin-top: -20px; */
+    z-index: -20;
+    /* margin-top: -10px; */
+}
+.head{
+    font-size: 320px;
+    /* font-style: italic; */
+    font-style:oblique;
+    padding-left: 10px;
+    top: 160px;
+    /* z-index: -50; */
+    -webkit-text-stroke: 5px white;
+    color: transparent;
+    font-family: "Archivo", sans-serif;
+    position: absolute;
+    z-index: 0;
+}
+.wave{
+    margin-top: -6px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 25px;
+    /* position: absolute; */
+    width: 93%;
+}
+.nav{
+    display: flex;
+}
+.navli{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navli:nth-last-child(1){
+    font-size: 20px;
+}
+.logo{
+    font-family: ninja;
+    font-size: 25px;
+}
+.head2{
+    color: white;
+    z-index: -50;
+}
+a:hover{
+    background: #ed7b1c;
+    cursor: pointer;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+.moon:hover{
+    color: #d56231;
+}
+.vid1{
+    /* height: 40px; */
+    height: 25vw;
+    border-radius: 50px;
+}
+.hero2{
+    /* position: absolute; */
+    width: 100%;
+}
+.hero2{
+    height: 100vh;
+}
+.hero2main{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 50px;
+    align-items: center;
+    
+}
+.hero2main > h1{
+    font-size: 120px;
+    margin: 10px;
+    margin-left: 0;
+    letter-spacing: -4px;
+}
+.content {
+    color: #d56231;
+    border-bottom: #d56231 2px solid;
+    padding-bottom: 10px;
+    transition: opacity 1s; /* Apply transition to opacity */
+    font-size: 110px;
+   font-family: ninja;
+   letter-spacing: 0px;
+   margin-left: 20px;
+}
+ 
+.content::after {
+    content: "";
+    animation: changeContent 5s infinite;
+}
+
+@keyframes changeContent {
+    0% { content: "Redefined"; }
+    80% { content: "Shattered"; }
+    99.99% { content: "Provoked"; }
+    
+}
+.confines{
+    font-size: 110px;
+}
+.hero3{
+    height: 100vh;
+    display: flex;
+    gap: 100px;
+    margin-left: 20px;
+    align-items: center;
+    
+}
+
+.vid2{
+    rotate: -90deg;
+    height: 50vw;
+    /* margin-top: -150px; */
+    margin-left: 120px;
+    border-radius: 20px;
+}
+
+.keypoints > li{
+    list-style-type: circle;
+    font-size: 35px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-right: 70px;
+    text-align: left;
+}
+.words{
+    font-family: ninja;
+    color: #d56231;
+}
+.heading{
+    transition: all 1.3s ;
+}
+.hero4{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    width: 15vw;
+    align-content: center;
+    /* margin-left: -15px; */
+    height: 90vh;
+    /* margin-top: 30px; */
+}
+
+.thumb{
+    position: absolute;
+    width: 1400px;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 50;
+}
+.vid3{
+    object-fit: cover;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 0;
+    width: 90vw;
+}
+/* .btn{
+    margin-top: 500px;
+} */
+
+.btns{
+    margin-top: 600px;
+    /* display: flex;
+    align-content: center;
+    align-items: center; */
+    
+}
+.play {
+    background: white;
+    color: black;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.pause {
+    background: white;
+    color: black;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.specs{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 95vw;
+    margin-left: 60px;
+}
+.containers{
+    border-right: 1px solid white;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 20px;
+}
+.containers:nth-child(3){
+    border: none;
+}
+.speclist{
+    margin-top: 30px;
+    list-style-type: circle;
+}
+.speclist:nth-child(1){
+    margin-top: 10px;
+}
+.containers > h1{
+    font-family: ninja;
+    color: #d56231;
+    border-bottom: 1px solid  #d56231;
+    padding-bottom: 20px
+}
+.hero6{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 120px;
+    align-items: center;
+    margin-top: 100px;
+    gap: 50px;
+}
+.vid4{
+    width: 600px;
+    border-radius: 50%;
+}
+.hero6head{
+    font-size: 30px;
+    text-align: center;
+    margin-top: -20px;
+}
+.second{
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    
+}
+.first{
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.start{
+    padding: 15px;
+    font-size: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s  ease-in-out;
+}
+
+.arrow{
+    padding: 13px;
+    cursor: pointer;
+    /* color: orange; */
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+    background: transparent;
+    /* border: 2px solid  orange; */
+    border-radius: 50%;
+    animation: bounce 1s infinite;
+}
+.start:hover{
+    background: transparent;
+    color:  #d56231;
+    border: 2px solid #d56231;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+      transform: translateX(25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+@keyframes bounce2 {
+    0%,
+    100% {
+      transform: translateY(50%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+   
+
+  footer{
+    margin: auto;
+    margin-top: 120px;
+    margin-bottom: 60px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background: rgb(0, 0, 0);
+    height: 60vh;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 70px;
+    padding-left: 70px;
+    
+  }
+
+  .foothead{
+    font-family: ninja;
+    /* color: black; */
+    font-size: 40px;
+    width: 550px;
+    /* text-align: center; */
+    font-weight: 500;
+  }
+.footin{
+    border-radius: 10px;
+    border: none;
+    padding: 7px;
+    padding-left: 20px;
+    background: transparent;
+    /* padding-right: 0px; */
+    width: 250px;
+}
+.inputs{
+    border-bottom: 1px solid white;
+    width: 60%;
+    padding-bottom: 10px;
+    margin-top: 70px;
+
+}
+.footbtn{
+    background: white;
+    border: none;
+    padding: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 50%;
+}
+.foot1{
+    /* margin: auto; */
+    margin-top: 50px;
+}
+.foot2{
+    margin: auto;
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+}
+.links{
+    display: flex;
+    gap: 60px;
+    margin-top: 120px;
+}
+.social{
+    font-size: 30px;
+    cursor: pointer;
+}
+.links2{
+    font-size: 20px;
+    margin-top: 70px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.links3{
+    margin-top: 70px;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+}
+.spe{
+    padding-bottom: 10px;
+}
+.special{
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+.social2{
+    margin-top: 70px;
+    cursor: pointer;
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+}
+.scroll{
+    position: absolute;
+    right: 120px;
+    margin-top: -30px;
+    animation: bounce2 1s infinite;
+    font-size: 50px;
+}
+
+.spe:hover{
+    color: #d56231;
+}
+.social1:hover{
+    color: #d56231;
+}
+.bgimg{
+    margin-top: -20px;
+}
+.dark{
+    cursor: pointer;
+}
+body.dark-theme {
+    background: rgb(245, 243, 243);
+    color: black;
+  }
+.darkhead1.dark-theme{
+    /* color: black; */
+    -webkit-text-stroke: 5px black;
+    color: transparent;
+}
+.darkhead2.dark-theme{
+    color: black;
+}
+a.dark-theme{
+    color: black;
+}
+.play.dark-theme{
+    background-color: #d56231;
+    color: white;
+}
+.ctn1.dark-theme{
+    border-right: 1px solid black;
+}
+.ctn2.dark-theme{
+    border-right: 1px solid black;
+}
+.first.dark-theme{
+    border-bottom: 2px solid black;
+}
+.second.dark-theme{
+    border-bottom: 2px solid black;
+}
+.arrow.dark-theme{
+    border: 2px solid black;
+    color: black;
+}
+footer.dark-theme{
+    color: white;
+}
+.dark{
+    margin-top: -3px;
+    border: none;
+   background: transparent;
+   color: white;
+   font-size: 1px;
+}
+.moon{
+    font-size: 17px;
+    padding-left: 10px;
+}
+.moon.dark-theme{
+    color: black;
+}
+.mobilevid{
+    display: none;
+}
+.heading{
+    font-size: 100px;
+    /* margin-top: -px; */
+}
+
+
+
+/* MOBILE  */
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    body{
+        overflow-x: hidden;
+    }
+    .head{
+        font-size: 75px;
+        top: 140px;
+        
+    }
+    .hero2{
+        /* display: none; */
+        
+        
+    }
+    .hero2main{
+        /* gap: 8; */
+        gap: -500px;
+        margin-left: 50px;
+
+    }
+    .hero3{
+        /* display: none; */
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        margin-top: -380px;
+        
+    }
+    .vid3{
+        width: 80vw;
+    }
+    .thumb{
+        width: 80vw;
+        /* display: none; */
+
+    }
+    .hero4{
+        /* display: none; */
+        /* margin: 70px; */
+        margin-left: 10px;
+        margin-top: -180px;
+
+        /* margin-top: -100px; */
+    }
+    .hero5{
+        margin-left: -50px;
+        margin-top: -400px;
+    }
+
+    .specs{
+        flex-direction: column;
+        margin-top: -100px;
+        
+    }
+    .containers{
+        border: none;
+        font-size: 15px;
+        padding: 0;
+        text-align: left;
+        margin: 20px;
+    }
+    .speclist{
+        margin: 0;
+    }
+    .containers > h1{
+        font-size: 20px;
+    }
+    
+    .hero6{
+        /* display: none; */
+        flex-direction: column;
+        margin-left: 120px;
+    }
+    .vid4{
+        width: 300px;
+    }
+    .first{
+        width: 350px;
+        font-size: 15px;
+    }
+    .start{
+        font-size: 10px;
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .arrow{
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-size: 10px;
+    }
+    .second{
+        font-size: 15px;
+    }
+    footer{
+        display: none;
+    }
+    .navli{
+        display: none;
+    }
+    .logo{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    header{
+        padding: 0;
+
+    }
+    .img{
+        margin-top: 80px;
+    }
+    .wave{
+        margin-top: -5px;
+    }
+    .heading{
+        font-size: 20px;
+        /* margin-left: 400px; */
+        /* display: none; */
+        /* width: 100vw; */
+        /* margin-left: 200px; */
+        margin-left: -50px;
+    }
+    .vid1{
+        /* margin-left: -300px; */
+    }
+    .confines{
+        font-size: 20px;
+    }
+    .content{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .vid2{
+        width: 1000px;
+        margin: 0;
+        padding: 0;
+        display: none;
+        border-radius: 20px;
+    }
+    .keypoints{
+        margin: 0;
+        padding: 0;
+        margin-left: -300px;
+        font-size: 1px;
+        /* display: none; */
+        margin-top: -220px;
+    }
+    .mobilevid{
+        display: block;
+        width:200px;
+        border-radius: 20px;
+        margin: 100px;
+        rotate: -90deg;
+        margin-top: -50px;
+        /* height: 400px; */
+    }
+    .keypoints > li{
+        margin: 20px;
+        font-size: 15px;
+        width: 80vw;
+        /* margin-top: -00px; */
+        margin-left: 350px;
+    }
+    .play{
+        /* margin-top: -1000px; */
+        display: none;
+    }
+  }
